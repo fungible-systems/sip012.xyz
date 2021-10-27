@@ -1,0 +1,32 @@
+{
+  "name": "sip012.xyz",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@nelson-ui/react": "^0.1.1",
+    "jotai": "1.4.2",
+    "jotai-query-toolkit": "0.1.13",
+    "modern-normalize": "1.1.0",
+    "next": "^12.0.2-canary.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-query": "3.29.0",
+    "sip-12": "^0.2.0"
+  },
+  "devDependencies": {
+    "@stacks/prettier-config": "0.0.9",
+    "@types/node": "16.11.6",
+    "@types/react": "17.0.33",
+    "eslint": "7",
+    "eslint-config-next": "12.0.1",
+    "prettier": "2.4.1",
+    "typescript": "4.4.4"
+  },
+  "prettier": "@stacks/prettier-config"
+}

@@ -5,8 +5,8 @@ export async function getVoteData(): Promise<VoteData> {
   const json = await res.json();
   return {
     votes: {
-      support: json.votes.support || null,
-      reject: json.votes.reject || null,
+      support: json.votes.support,
+      reject: json.votes.reject,
     },
     totals: {
       support: BigInt(json.totals.support).toString(10),
@@ -16,12 +16,8 @@ export async function getVoteData(): Promise<VoteData> {
 }
 
 export async function getBTCVoteTransactions(approve = false): Promise<VoteTransaction[] | null> {
-  let url: string;
-  if (approve) {
-    url = 'https://sip12.halo.ms/btcApprove';
-  } else {
-    url = 'https://sip12.halo.ms/btcNoApprove';
-  }
-  const res = await fetch(url);
+  const res = await fetch(
+    approve ? 'https://sip12.halo.ms/btcApprove' : 'https://sip12.halo.ms/btcNoApprove'
+  );
   return (await res.json()) || null;
 }

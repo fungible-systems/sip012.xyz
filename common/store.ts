@@ -11,7 +11,7 @@ const btcVoteYesTransactionsState = atomWithQuery([getBTCVoteTransactions.name, 
 const btcVoteNoTransactionsState = atomWithQuery([getBTCVoteTransactions.name, 'no'], () =>
   getBTCVoteTransactions(false)
 );
-const allVoteDataState = atomWithQuery(getVoteData.name, () => getVoteData());
+const allVoteDataState = atomWithQuery('getVoteData', () => getVoteData());
 
 // ---
 // queries
@@ -24,7 +24,7 @@ export const btcVoteNoTransactionsQuery: Query = [
   [getBTCVoteTransactions.name, 'no'],
   () => getBTCVoteTransactions(false),
 ];
-export const allVoteDataQuery: Query = [getVoteData.name, getVoteData];
+export const allVoteDataQuery: Query = ['getVoteData', getVoteData];
 
 // ---
 // hooks

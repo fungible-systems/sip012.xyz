@@ -73,6 +73,14 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fungible-systems/sip-12@0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@fungible-systems/sip-12/-/sip-12-0.2.0.tgz#3ec7f87dfe900bfdb726428a7c862e620e3d9e17"
+  integrity sha512-4zyTTPjVO4oh5GfiXHtK8RZOBB4mqW8oMYDVrSi32F6eDMVifdu1JTtM8qgduFWlcHXwpCCsMgQh2txnRn63eg==
+  dependencies:
+    "@stacks/blockchain-api-client" "^0.70.1"
+    micro-stacks "^0.0.30"
+
 "@hapi/accept@5.0.2":
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.2.tgz#ab7043b037e68b722f93f376afb05e85c0699523"
@@ -2844,14 +2852,6 @@ side-channel@^1.0.4:
     call-bind "^1.0.0"
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
-
-sip-12@0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/sip-12/-/sip-12-0.2.0.tgz#92fa389b84ed4a6b2489b4acaecf2ef74db8b58d"
-  integrity sha512-dCQaruDQCOBL7nudbNsyUvHU6LW28Cbp6syH5Pz6GKjoqqLRxtX8PQ+7DZKfOZJaqi1FBPOw/2Gqr9rIjUJrAw==
-  dependencies:
-    "@stacks/blockchain-api-client" "^0.70.1"
-    micro-stacks "^0.0.30"
 
 slash@^3.0.0:
   version "3.0.0"

@@ -120,7 +120,7 @@
     "@nelson-ui/theme" "0.1.3"
     "@stitches/core" "1.2.5"
 
-"@nelson-ui/react@^0.1.1":
+"@nelson-ui/react@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@nelson-ui/react/-/react-0.1.1.tgz#d11c6238334d8a4273fc758b136a05d2acc58acf"
   integrity sha512-AmePF5WQNmVMxdeIgBgZNPDOkcT+I0V5KSlotCi8RtTaiJcCQyEh8YjYTOhi96DcAASMBC7fs2sEVeA0+pqMzg==
@@ -1402,7 +1402,7 @@ evp_bytestokey@^1.0.0, evp_bytestokey@^1.0.3:
     md5.js "^1.3.4"
     safe-buffer "^5.1.1"
 
-fast-deep-equal@>=3.1.3, fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
+fast-deep-equal@3.1.3, fast-deep-equal@>=3.1.3, fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/fast-deep-equal/-/fast-deep-equal-3.1.3.tgz#3a7d56b559d6cbc3eb512325244e619a65c6c525"
   integrity sha512-f3qQ9oQy9j2AhBe/H9VC91wLmKBCCU/gDOnKNAYG5hswO7BLKj09Hc5HYNz9cGI++xlpDCIgDaitVs03ATR84Q==
@@ -2180,7 +2180,7 @@ neo-async@^2.6.1:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
-next@^12.0.2-canary.2:
+next@12.0.2-canary.2:
   version "12.0.2-canary.2"
   resolved "https://registry.yarnpkg.com/next/-/next-12.0.2-canary.2.tgz#c973827c4d9a9aec55ec091c66bb97db32eab8f8"
   integrity sha512-vkEaSesa3lnV5UNIyChj6WMSG8rabivpvQlZIvqtIIk2CDL9lkj7axW0cFzNEVphbnGFqqk3gBRrnFy2wk/aZA==
@@ -2845,7 +2845,7 @@ side-channel@^1.0.4:
     get-intrinsic "^1.0.2"
     object-inspect "^1.9.0"
 
-sip-12@^0.2.0:
+sip-12@0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/sip-12/-/sip-12-0.2.0.tgz#92fa389b84ed4a6b2489b4acaecf2ef74db8b58d"
   integrity sha512-dCQaruDQCOBL7nudbNsyUvHU6LW28Cbp6syH5Pz6GKjoqqLRxtX8PQ+7DZKfOZJaqi1FBPOw/2Gqr9rIjUJrAw==

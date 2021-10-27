@@ -18,8 +18,8 @@ export const HowTo = () => {
           }
         >
           dust amount
-        </Link>
-        of BTC to
+        </Link>{' '}
+        of BTC to{' '}
         <Box as="pre" display={'inline'}>
           111111111111111111112czxoHN
         </Box>
@@ -33,8 +33,9 @@ export const HowTo = () => {
             'https://github.com/bitcoin/bitcoin/blob/6d8543504d8c5bde1d12a3c60407dee44d2c8e11/src/policy/policy.cpp#L16-L29'
           }
         >
+          {' '}
           dust amount
-        </Link>
+        </Link>{' '}
         of BTC to
         <Box as="pre" display={'inline'}>
           111111111111111111112kmzDG2

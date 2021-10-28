@@ -51,7 +51,7 @@ const TopArea = () => (
       '@bp1': {
         px: '64px',
         pb: '48px',
-        pt: '96px',
+        pt: '48px',
         borderRadius: '48px',
       },
     }}

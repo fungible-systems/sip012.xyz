@@ -1,5 +1,5 @@
 import { useAllVoteData } from '../common/store';
-import { BoxProps, Grid, Stack, Text } from '@nelson-ui/react';
+import { Box, BoxProps, Grid, SpaceBetween, Stack, Text } from '@nelson-ui/react';
 import { Card } from './card';
 import { microStxToStx } from '../common/utils';
 import { SafeSuspense } from './safe-suspense';
@@ -8,16 +8,7 @@ const Caption = (props: BoxProps) => (
   <Text lineHeight={1} fontSize={'$1'} color={'$text-subdued'} {...props} />
 );
 const Title = (props: BoxProps) => (
-  <Text
-    fontSize={'$4'}
-    lineHeight={1}
-    css={{
-      '@bp1': {
-        fontSize: '$5',
-      },
-    }}
-    {...props}
-  />
+  <Text fontSize={'$1'} lineHeight={1} textTransform={'uppercase'} {...props} />
 );
 
 const Count = (props: BoxProps) => (
@@ -29,6 +20,24 @@ const Count = (props: BoxProps) => (
         fontSize: '$5',
       },
     }}
+    {...props}
+  />
+);
+
+const BackgroundImage = (props: BoxProps) => (
+  <Box
+    borderRadius={'$medium'}
+    overflow={'hidden'}
+    position="relative"
+    size="120px"
+    flexShrink={0}
+    css={{
+      '@bp1': {
+        size: '190px',
+      },
+    }}
+    backgroundPosition={'center center'}
+    backgroundSize={'cover'}
     {...props}
   />
 );
@@ -70,31 +79,78 @@ const Placeholder = () => (
     <Caption>Loading...</Caption>
   </>
 );
-export const Votes = () => {
-  return (
-    <Grid
-      textAlign={'center'}
-      width={'100%'}
-      gap={'$extra-loose'}
-      gridTemplateColumns={'1fr'}
-      css={{
-        '@bp1': {
-          gridTemplateColumns: '1fr 1fr',
-        },
-      }}
-    >
-      <Card>
-        <Title>👌 In&nbsp;support</Title>
+
+const YesVote = () => (
+  <Card
+    p="$base-loose"
+    background={'$background'}
+    zIndex={'99'}
+    width="90%"
+    transform="translateX(-5%)"
+    css={{
+      '@bp1': {
+        transform: 'none',
+        position: 'absolute',
+        left: 0,
+        width: '72%',
+      },
+    }}
+  >
+    <Stack alignItems={'center'} isInline>
+      <BackgroundImage backgroundImage={'url(/yes.gif)'} />
+      <Stack textAlign={'left'}>
+        <Title>In&nbsp;support</Title>
         <SafeSuspense fallback={<Placeholder />}>
           <YesVotes />
         </SafeSuspense>
-      </Card>
-      <Card>
-        <Title>🙅 Against</Title>
+      </Stack>
+    </Stack>
+  </Card>
+);
+
+const NoVote = () => (
+  <Card
+    p="$base-loose"
+    background={'#EBEBEB'}
+    width="90%"
+    transform="translateX(15%) translateY(-5%)"
+    css={{
+      '@bp1': {
+        transform: 'none',
+        position: 'absolute',
+        right: 0,
+        top: '200px',
+        width: '72%',
+      },
+    }}
+  >
+    <SpaceBetween alignItems={'center'} isInline>
+      <Stack px={'$extra-loose'} width="100%" textAlign={'right'}>
+        <Title>Against</Title>
         <SafeSuspense fallback={<Placeholder />}>
           <NoVotes />
         </SafeSuspense>
-      </Card>
-    </Grid>
+      </Stack>
+      <BackgroundImage backgroundImage={'url(/no.gif)'} />
+    </SpaceBetween>
+  </Card>
+);
+
+export const Votes = () => {
+  return (
+    <Box
+      transform="translateY(-12%)"
+      textAlign={'center'}
+      width={'100%'}
+      position="relative"
+      css={{
+        '@bp1': {
+          height: '400px',
+        },
+      }}
+    >
+      <YesVote />
+      <NoVote />
+    </Box>
   );
 };

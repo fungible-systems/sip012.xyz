@@ -9,7 +9,15 @@ import Head from 'next/head';
 import { VoteOnSip } from '../components/vote-on-sip';
 
 const Title = () => (
-  <Box width="100%" pt={'$extra-loose'} px={'$extra-loose'}>
+  <Box
+    pt={'$extra-loose'}
+    css={{
+      '@bp2': {
+        pt: 0,
+      },
+    }}
+    width="100%"
+  >
     <VoteOnSip />
   </Box>
 );
@@ -25,8 +33,7 @@ const ContentArea = () => (
     css={{
       '@bp2': {
         px: '64px',
-        pb: '64px',
-        pt: '48px',
+        py: '64px',
       },
     }}
   >
@@ -48,7 +55,7 @@ const TopArea = () => (
     css={{
       '@bp2': {
         px: '64px',
-        pb: '48px',
+        pb: '64px',
         pt: '48px',
         borderRadius: '48px',
       },
@@ -72,6 +79,7 @@ const Home: NextPage = () => {
         <meta property="og:image" content="https://sip012.xyz/og.png" />
       </Head>
       <Centered
+        background={'#F5F5F5'}
         width="100%"
         minHeight={'100vh'}
         css={{
@@ -82,7 +90,7 @@ const Home: NextPage = () => {
       >
         <Box
           width="100%"
-          maxWidth="1080px"
+          maxWidth="1100px"
           css={{
             '@bp2': {
               borderRadius: '48px',

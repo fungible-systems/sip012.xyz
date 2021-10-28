@@ -7,14 +7,29 @@ import { SafeSuspense } from './safe-suspense';
 const Caption = (props: BoxProps) => (
   <Text
     lineHeight={1}
-    fontSize={'$1'}
+    fontSize={'$2'}
+    css={{
+      '@bp2': {
+        fontSize: '$3',
+      },
+    }}
     color={'$text-subdued'}
     textTransform={'uppercase'}
     {...props}
   />
 );
 const Title = (props: BoxProps) => (
-  <Text fontSize={'$1'} lineHeight={1} textTransform={'uppercase'} {...props} />
+  <Text
+    fontSize={'$2'}
+    css={{
+      '@bp2': {
+        fontSize: '$3',
+      },
+    }}
+    lineHeight={1}
+    textTransform={'uppercase'}
+    {...props}
+  />
 );
 
 const Count = (props: BoxProps) => (
@@ -23,7 +38,7 @@ const Count = (props: BoxProps) => (
     lineHeight={1}
     css={{
       '@bp2': {
-        fontSize: '$5',
+        fontSize: '$6',
       },
     }}
     {...props}

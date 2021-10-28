@@ -1,6 +1,6 @@
 import Cors from 'cors';
 import { NextApiRequest, NextApiResponse } from 'next';
-import { getVoteData } from '@fungible-systems/sip-12';
+import { haloGetVoteData } from '@fungible-systems/sip-12';
 
 // Initializing the cors middleware
 const cors = Cors({
@@ -23,6 +23,11 @@ function runMiddleware(req: NextApiRequest, res: NextApiResponse, fn: any) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   await runMiddleware(req, res, cors);
-  res.setHeader('Cache-Control', 's-maxage=300, stale-while-revalidate');
-  res.status(200).json(await getVoteData());
+  try {
+    const data = await haloGetVoteData();
+    res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate');
+    res.status(200).json(data);
+  } catch (e) {
+    res.status(500).json(e);
+  }
 }

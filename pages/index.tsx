@@ -26,7 +26,7 @@ const ContentArea = () => (
     css={{
       '@bp1': {
         px: '64px',
-        pb: '48px',
+        pb: '64px',
         pt: '48px',
       },
     }}

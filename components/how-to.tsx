@@ -1,6 +1,7 @@
 import { Card } from './card';
 import { CardTitle, Link } from './typography';
 import { Box, Text } from '@nelson-ui/react';
+import { BTC_VOTE_ADDRESSES } from '@fungible-systems/sip-12';
 
 export const HowTo = () => {
   return (
@@ -20,9 +21,9 @@ export const HowTo = () => {
           dust amount
         </Link>{' '}
         of BTC to{' '}
-        <Link href="https://mempool.space/address/111111111111111111112czxoHN">
+        <Link href={`https://mempool.space/address/${BTC_VOTE_ADDRESSES.YES}`}>
           <Box as="pre" display={'inline'}>
-            111111111111111111112czxoHN
+            {BTC_VOTE_ADDRESSES.YES}
           </Box>
         </Link>
         .
@@ -39,9 +40,9 @@ export const HowTo = () => {
           dust amount
         </Link>{' '}
         of BTC to{' '}
-        <Link href="https://mempool.space/address/111111111111111111112kmzDG2">
+        <Link href={`https://mempool.space/address/${BTC_VOTE_ADDRESSES.NO}`}>
           <Box as="pre" display={'inline'}>
-            111111111111111111112kmzDG2
+            {BTC_VOTE_ADDRESSES.NO}
           </Box>
         </Link>
         .

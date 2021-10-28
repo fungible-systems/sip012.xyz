@@ -96,7 +96,7 @@ const YesVote = () => (
       },
     }}
   >
-    <Stack alignItems={'center'} isInline>
+    <Stack spacing={'$extra-loose'} alignItems={'center'} isInline>
       <BackgroundImage backgroundImage={'url(/yes.gif)'} />
       <Stack textAlign={'left'}>
         <Title>In&nbsp;support</Title>
@@ -124,15 +124,15 @@ const NoVote = () => (
       },
     }}
   >
-    <SpaceBetween alignItems={'center'} isInline>
-      <Stack px={'$extra-loose'} width="100%" textAlign={'right'}>
+    <Stack spacing={'$extra-loose'} alignItems={'center'} isInline>
+      <Stack width="100%" textAlign={'right'}>
         <Title>Against</Title>
         <SafeSuspense fallback={<Placeholder />}>
           <NoVotes />
         </SafeSuspense>
       </Stack>
       <BackgroundImage backgroundImage={'url(/no.gif)'} />
-    </SpaceBetween>
+    </Stack>
   </Card>
 );
 

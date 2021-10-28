@@ -21,7 +21,7 @@ export const HowTo = () => {
           >
             dust amount
           </Link>{' '}
-          of BTC to{' '}
+          (around 6,000 sats) of BTC to{' '}
           <Link href={`https://mempool.space/address/${BTC_VOTE_ADDRESSES.YES}`}>
             <Box as="pre" display={'inline'}>
               {BTC_VOTE_ADDRESSES.YES}
@@ -40,7 +40,7 @@ export const HowTo = () => {
             {' '}
             dust amount
           </Link>{' '}
-          of BTC to{' '}
+          (around 6,000 sats) of BTC to{' '}
           <Link href={`https://mempool.space/address/${BTC_VOTE_ADDRESSES.NO}`}>
             <Box as="pre" display={'inline'}>
               {BTC_VOTE_ADDRESSES.NO}

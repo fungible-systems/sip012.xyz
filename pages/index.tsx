@@ -7,6 +7,7 @@ import { About } from '../components/about';
 import { HowTo } from '../components/how-to';
 import Head from 'next/head';
 import { VoteOnSip } from '../components/vote-on-sip';
+import { DarkModeToggle } from '../components/dark-mode-toggle';
 
 const Title = () => (
   <Box
@@ -48,7 +49,7 @@ const TopArea = () => (
     justifyContent={'center'}
     alignItems={'center'}
     width="100%"
-    background={'#F5F5F5'}
+    background={'$surface-subdued'}
     px={'$extra-loose'}
     pb={'$extra-loose'}
     borderBottomRightRadius={'48px'}
@@ -70,6 +71,9 @@ const TopArea = () => (
 const Home: NextPage = () => {
   return (
     <>
+      <Box position="absolute" right={'$base'} top={'$base'}>
+        <DarkModeToggle />
+      </Box>
       <Head>
         <title>VOTE ON SIP-012</title>
         <meta property="og:title" content="Vote on SIP-012" />
@@ -80,9 +84,11 @@ const Home: NextPage = () => {
         <meta property="og:image" content="https://sip012.xyz/og.png" />
       </Head>
       <Centered
-        background={'#F5F5F5'}
+        background={'$surface-subdued'}
         width="100%"
         minHeight={'100vh'}
+        color={'$text'}
+        pt={'$loose'}
         css={{
           '@bp2': {
             pt: '64px',
@@ -97,7 +103,7 @@ const Home: NextPage = () => {
               borderTopLeftRadius: '48px',
             },
           }}
-          background="#EBEBEB"
+          background={'$border--disabled'}
         >
           <TopArea />
           <ContentArea />

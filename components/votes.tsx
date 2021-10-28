@@ -139,7 +139,7 @@ const YesVote = () => (
 const NoVote = () => (
   <Card
     p="$base-loose"
-    background={'#EBEBEB'}
+    background={'$border--disabled'}
     transform="translateX(0%) translateY(-5%)"
     css={{
       '@bp2': {

@@ -7,11 +7,11 @@ export const HowTo = () => {
   return (
     <Card>
       <CardTitle>How to vote</CardTitle>
-      <Text>
+      <Text maxWidth="72ch">
         To vote, you&apos;ll need to send a Bitcoin transaction using either the key(s) you used to
         Stack your STX, or the key(s) to your PoX reward address.
       </Text>
-      <Text>
+      <Text maxWidth="72ch">
         To vote &quot;yes,&quot; send a{' '}
         <Link
           href={
@@ -29,7 +29,7 @@ export const HowTo = () => {
         .
       </Text>
 
-      <Text>
+      <Text maxWidth="72ch">
         To vote &quot;no,&quot; send a
         <Link
           href={
@@ -47,7 +47,7 @@ export const HowTo = () => {
         </Link>
         .
       </Text>
-      <Text>
+      <Text maxWidth="72ch">
         The vote-tallying software will take it from there. Happy voting and thank you for your
         participation on the network!
       </Text>

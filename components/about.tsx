@@ -5,7 +5,7 @@ import { Text } from '@nelson-ui/react';
 export const About = () => {
   return (
     <Card>
-      <CardTitle>SIP overview</CardTitle>
+      <CardTitle>About SIP-012</CardTitle>
       <Text maxWidth="72ch">
         The current Clarity cost limits were set very conservatively in Stacks 2.0: blocks with
         contract-calls frequently meet one or more of these limits, which negatively affects
@@ -13,7 +13,7 @@ export const About = () => {
         upgrade and further, that the network upgrade be executed at a block height chosen by an
         off-chain process described in this SIP.
       </Text>
-      <Link href={'https://github.com/stacksgov/sips/pull/41'}>Read full SIP →</Link>
+      <Link href={'https://github.com/stacksgov/sips/pull/41'}>Read the SIP →</Link>
     </Card>
   );
 };

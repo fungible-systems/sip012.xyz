@@ -5,7 +5,13 @@ import { microStxToStx } from '../common/utils';
 import { SafeSuspense } from './safe-suspense';
 
 const Caption = (props: BoxProps) => (
-  <Text lineHeight={1} fontSize={'$1'} color={'$text-subdued'} {...props} />
+  <Text
+    lineHeight={1}
+    fontSize={'$1'}
+    color={'$text-subdued'}
+    textTransform={'uppercase'}
+    {...props}
+  />
 );
 const Title = (props: BoxProps) => (
   <Text fontSize={'$1'} lineHeight={1} textTransform={'uppercase'} {...props} />
@@ -16,7 +22,7 @@ const Count = (props: BoxProps) => (
     fontSize={'$3'}
     lineHeight={1}
     css={{
-      '@bp1': {
+      '@bp2': {
         fontSize: '$5',
       },
     }}
@@ -32,8 +38,8 @@ const BackgroundImage = (props: BoxProps) => (
     size="120px"
     flexShrink={0}
     css={{
-      '@bp1': {
-        size: '190px',
+      '@bp2': {
+        size: '240px',
       },
     }}
     backgroundPosition={'center center'}
@@ -85,20 +91,27 @@ const YesVote = () => (
     p="$base-loose"
     background={'$background'}
     zIndex={'99'}
-    width="90%"
     transform="translateX(-5%)"
     css={{
-      '@bp1': {
+      '@bp2': {
         transform: 'none',
         position: 'absolute',
         left: 0,
-        width: '72%',
+        pr: '64px',
+        minWidth: '60%',
       },
     }}
   >
-    <Stack spacing={'$extra-loose'} alignItems={'center'} isInline>
+    <Stack alignItems={'center'} isInline>
       <BackgroundImage backgroundImage={'url(/yes.gif)'} />
-      <Stack textAlign={'left'}>
+      <Stack
+        css={{
+          '@bp2': {
+            pl: '$base',
+          },
+        }}
+        textAlign={'left'}
+      >
         <Title>In&nbsp;support</Title>
         <SafeSuspense fallback={<Placeholder />}>
           <YesVotes />
@@ -112,20 +125,28 @@ const NoVote = () => (
   <Card
     p="$base-loose"
     background={'#EBEBEB'}
-    width="90%"
-    transform="translateX(15%) translateY(-5%)"
+    transform="translateX(0%) translateY(-5%)"
     css={{
-      '@bp1': {
+      '@bp2': {
         transform: 'none',
         position: 'absolute',
         right: 0,
-        top: '200px',
-        width: '72%',
+        top: '240px',
+        pl: '64px',
+        minWidth: '60%',
       },
     }}
   >
-    <Stack spacing={'$extra-loose'} alignItems={'center'} isInline>
-      <Stack width="100%" textAlign={'right'}>
+    <Stack alignItems={'center'} isInline>
+      <Stack
+        css={{
+          '@bp2': {
+            pr: '$base',
+          },
+        }}
+        width="100%"
+        textAlign={'right'}
+      >
         <Title>Against</Title>
         <SafeSuspense fallback={<Placeholder />}>
           <NoVotes />
@@ -138,19 +159,20 @@ const NoVote = () => (
 
 export const Votes = () => {
   return (
-    <Box
+    <Stack
+      spacing={0}
       transform="translateY(-12%)"
       textAlign={'center'}
       width={'100%'}
       position="relative"
       css={{
-        '@bp1': {
-          height: '400px',
+        '@bp2': {
+          height: '480px',
         },
       }}
     >
       <YesVote />
       <NoVote />
-    </Box>
+    </Stack>
   );
 };

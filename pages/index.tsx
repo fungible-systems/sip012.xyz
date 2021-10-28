@@ -9,14 +9,13 @@ import Head from 'next/head';
 import { VoteOnSip } from '../components/vote-on-sip';
 
 const Title = () => (
-  <Box width="100%" maxWidth={'1264px'} pt={'$extra-loose'} px={'$extra-loose'}>
+  <Box width="100%" pt={'$extra-loose'} px={'$extra-loose'}>
     <VoteOnSip />
   </Box>
 );
 
 const ContentArea = () => (
   <Stack
-    maxWidth={'820px'}
     spacing={'$extra-loose'}
     justifyContent={'center'}
     alignItems={'center'}
@@ -24,7 +23,7 @@ const ContentArea = () => (
     borderRadius={'48px'}
     p={'$extra-loose'}
     css={{
-      '@bp1': {
+      '@bp2': {
         px: '64px',
         pb: '64px',
         pt: '48px',
@@ -37,7 +36,6 @@ const ContentArea = () => (
 
 const TopArea = () => (
   <Stack
-    maxWidth={'820px'}
     spacing={'$extra-loose'}
     justifyContent={'center'}
     alignItems={'center'}
@@ -48,7 +46,7 @@ const TopArea = () => (
     borderBottomRightRadius={'48px'}
     borderBottomLeftRadius={'48px'}
     css={{
-      '@bp1': {
+      '@bp2': {
         px: '64px',
         pb: '48px',
         pt: '48px',
@@ -68,16 +66,19 @@ const Home: NextPage = () => {
         <title>VOTE ON SIP-012</title>
       </Head>
       <Centered
+        width="100%"
         minHeight={'100vh'}
         css={{
-          '@bp1': {
+          '@bp2': {
             p: '64px',
           },
         }}
       >
         <Box
+          width="100%"
+          maxWidth="1080px"
           css={{
-            '@bp1': {
+            '@bp2': {
               borderRadius: '48px',
             },
           }}

@@ -13,7 +13,13 @@ export const About = () => {
         upgrade and further, that the network upgrade be executed at a block height chosen by an
         off-chain process described in this SIP.
       </Text>
-      <Link href={'https://github.com/stacksgov/sips/pull/41'}>Read the SIP →</Link>
+      <Link
+        href={
+          'https://github.com/hirosystems/sips/blob/draft/sip-012/sips/sip-012/sip-012-cost-limits-network-upgrade.md'
+        }
+      >
+        Read the SIP →
+      </Link>
     </Card>
   );
 };

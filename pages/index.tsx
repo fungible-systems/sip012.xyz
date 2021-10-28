@@ -64,6 +64,12 @@ const Home: NextPage = () => {
     <>
       <Head>
         <title>VOTE ON SIP-012</title>
+        <meta property="og:title" content="Vote on SIP-012" />
+        <meta
+          property="og:description"
+          content="SIP-012 proposes an update to Clarity cost-limits via a network upgrade with the hopes of improving network capacity."
+        />
+        <meta property="og:image" content="https://sip012.xyz/og.png" />
       </Head>
       <Centered
         width="100%"

@@ -185,6 +185,7 @@ export const Votes = () => {
           height: '480px',
         },
       }}
+      maxWidth="1100px"
     >
       <YesVote />
       <NoVote />

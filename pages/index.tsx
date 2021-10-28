@@ -10,6 +10,7 @@ import { VoteOnSip } from '../components/vote-on-sip';
 
 const Title = () => (
   <Box
+    maxWidth="1100px"
     pt={'$extra-loose'}
     css={{
       '@bp2': {
@@ -84,16 +85,16 @@ const Home: NextPage = () => {
         minHeight={'100vh'}
         css={{
           '@bp2': {
-            p: '64px',
+            pt: '64px',
           },
         }}
       >
         <Box
           width="100%"
-          maxWidth="1100px"
           css={{
             '@bp2': {
-              borderRadius: '48px',
+              borderTopRightRadius: '48px',
+              borderTopLeftRadius: '48px',
             },
           }}
           background="#EBEBEB"

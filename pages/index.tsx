@@ -25,7 +25,7 @@ const Home: NextPage = () => {
           spacing={'$extra-loose'}
           justifyContent={'center'}
           alignItems={'center'}
-          p={'$base'}
+          p={'$extra-loose'}
           width="100%"
         >
           <Title />

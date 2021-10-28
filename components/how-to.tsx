@@ -20,9 +20,11 @@ export const HowTo = () => {
           dust amount
         </Link>{' '}
         of BTC to{' '}
-        <Box as="pre" display={'inline'}>
-          111111111111111111112czxoHN
-        </Box>
+        <Link href="https://mempool.space/address/111111111111111111112czxoHN">
+          <Box as="pre" display={'inline'}>
+            111111111111111111112czxoHN
+          </Box>
+        </Link>
         .
       </Text>
 
@@ -36,10 +38,12 @@ export const HowTo = () => {
           {' '}
           dust amount
         </Link>{' '}
-        of BTC to
-        <Box as="pre" display={'inline'}>
-          111111111111111111112kmzDG2
-        </Box>
+        of BTC to{' '}
+        <Link href="https://mempool.space/address/111111111111111111112kmzDG2">
+          <Box as="pre" display={'inline'}>
+            111111111111111111112kmzDG2
+          </Box>
+        </Link>
         .
       </Text>
       <Text>

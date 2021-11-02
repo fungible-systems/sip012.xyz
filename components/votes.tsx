@@ -118,7 +118,7 @@ const YesVote = () => (
     }}
   >
     <Stack alignItems={'center'} isInline>
-      <BackgroundImage backgroundImage={'url(/yes.gif)'} />
+      <BackgroundImage backgroundImage={'url(/yes.webp)'} />
       <Stack
         css={{
           '@bp2': {

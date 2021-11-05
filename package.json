@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@fungible-systems/sip-12": "0.2.0",
     "@nelson-ui/react": "0.1.1",
     "@radix-ui/react-switch": "^0.1.1",
     "cors": "^2.8.5",
@@ -21,7 +20,8 @@
     "next": "^12.0.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-query": "3.29.0"
+    "react-query": "3.29.0",
+    "sip-12": "0.3.1"
   },
   "devDependencies": {
     "@stacks/prettier-config": "0.0.9",

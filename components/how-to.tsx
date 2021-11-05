@@ -1,7 +1,7 @@
 import { Card } from './card';
 import { CardTitle, Link } from './typography';
 import { Box, Stack, Text } from '@nelson-ui/react';
-import { BTC_VOTE_ADDRESSES } from '@fungible-systems/sip-12';
+import { BTC_VOTE_ADDRESSES } from 'sip-12';
 
 export const HowTo = () => {
   return (

@@ -1,7 +1,7 @@
-import { atomWithQuery, useQueryAtom } from 'jotai-query-toolkit';
-import { Query } from 'jotai-query-toolkit/nextjs';
-import { VoteData } from '@fungible-systems/sip-12';
 import { API_URL } from './constants';
+import { atomWithQuery, useQueryAtom } from 'jotai-query-toolkit';
+import type { Query } from 'jotai-query-toolkit/nextjs';
+import type { VoteData } from 'sip-12';
 
 async function fetchFromApi(): Promise<VoteData> {
   const res = await fetch(`${API_URL}/api/votes`);
